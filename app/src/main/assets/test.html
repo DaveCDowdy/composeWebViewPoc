@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebView POC</title>
+</head>
+<body bgcolor="red">
+<center>
+    <br />
+    <input id="fname" type="text" placeholder="Enter your name" />
+    <br /><br />
+    <input id="pswd" type="password" placeholder="Enter password" />
+    <br /><br />
+    <button onclick="msg();">Submit</button>
+</center>
+</body>
+<script>
+    function msg() {
+        var fname = document.getElementById("fname").value;
+        var pswd = document.getElementById("pswd").value;
+
+        // Use the JavaScript interface to send data to Android
+        Dialog.showMessage(fname, pswd);
+    }
+</script>
+</html>
